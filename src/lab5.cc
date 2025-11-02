@@ -11,24 +11,28 @@
 
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
 #include <ctime>
 #include "myheaders.h"
 
 using namespace std;
 
-
 int main() {
 	
-	int		choice, sz;
-	long	data[MAXSIZE], wData[MAXSIZE];
-	double  begin_time, end_time, cpu_time_used;
-	string  ifilename, ofilename;
-	
+	int	choice, sz=0;
+	// I, Jackson Lechleitner, changed this to dynamic allocation
+	// to avoid the static allocation limits
+	long* data = new long[MAXSIZE];
+	long* wData = new long[MAXSIZE];
+
+	double begin_time, end_time, cpu_time_used;
+	string ifilename, ofilename;
+
 	while (1) {
 
 		printmenu();
 		cin >> choice;
-		
+
 		switch (choice) {
 
 			case 1: // Read input file and store data in arrays data1 and data2
@@ -50,13 +54,13 @@ int main() {
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-                    memcpy(wData, data, sz);
-                    
+                    memcpy(wData, data, sizeof(long) * sz);
+
 					begin_time = clock();   // start cpu timer
 			
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
-
+					insertion_sort(wData, sz);
 
 			
 					end_time = clock();		// end cpu timer
@@ -114,6 +118,9 @@ int main() {
 
 					cout << endl << "Received program exit command - I QUIT!" << endl << endl;
 
+					delete []data;
+					delete []wData;
+
 					return 0;
 
 			default: // Error in selection
@@ -124,6 +131,9 @@ int main() {
 
 	} // while
 	
+	delete []data;
+	delete []wData;
+
 	return 0;
 }
 
