@@ -14,3 +14,7 @@ int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 
 void insertion_sort(long data[], int size);
+void selection_sort(long data[], int size);
+void bubble_sort(long data[], int size);
+void merge_sort(long data[], int size);
+void quick_sort(long data[], int size);
