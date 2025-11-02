@@ -10,6 +10,7 @@
 //  ulimit -s 819200
 
 #include <iostream>
+#include <cstring>
 #include <ctime>
 #include "myheaders.h"
 
@@ -49,7 +50,7 @@ int main() {
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-                    
+                    memcpy(wData, data, sz);
                     
 					begin_time = clock();   // start cpu timer
 			
