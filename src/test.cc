@@ -7,8 +7,8 @@
 #include "myheaders.h"
 
 int main(){
-	int size = 1;
-	long arr[size] = {1};
+	int size = 10;
+	long arr[size] = {1001, -521, 67, 68, 96, 999, -1024, 6, 9, 0};
 	bubble_sort(arr, size);
 	printarray(arr, size);
 	return 1;

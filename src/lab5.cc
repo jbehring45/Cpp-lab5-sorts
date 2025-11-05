@@ -17,7 +17,7 @@
 
 using namespace std;
 
-/*int main() {
+int main() {
 	
 	int	choice, sz=0;
 	// I, Jackson Lechleitner, changed this to dynamic allocation
@@ -264,5 +264,5 @@ using namespace std;
 	delete []wData;
 
 	return 0;
-}*/
+}
 
