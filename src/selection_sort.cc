@@ -7,7 +7,7 @@ void selection_sort(long data[], int size)
 
 	    for (long i = 0; i < size - 1; i++)
 	    {
-	        minIndex = i; // set the min index to the ith iteration
+	        minIndex = i; // set the min index to the ith iteration 
 
 	        for (long j = i + 1; j < size; j++)
 	        {
