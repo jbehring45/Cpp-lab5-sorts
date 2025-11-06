@@ -12,7 +12,7 @@ void selection_sort(long data[], int size)
 	        for (long j = i + 1; j < size; j++)
 	        {
 	            if (data[j] < data[minIndex])
-	            {// if any element after the ith is less, store the new minIndex
+	            {// if any element after the ith is less store the new minIndex
 	            	minIndex = j;
 	            }
 	        }
