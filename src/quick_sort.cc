@@ -2,7 +2,7 @@
 
 //Function that quicksorts an array from index first to index last
 void quick_sort(long arr[], int first, int last){
-	//Declare and  variables for the upper and lower limits of the sub arrays
+	//Declare and variables for the upper and lower limits of the sub arrays
 	int lower = first+1;
 	int upper = last;
 
